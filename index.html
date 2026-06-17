@@ -637,9 +637,9 @@ refactor: melhoria interna no código</pre>
                 <div class="arrow">⬇</div>
                 <div class="box">Adiciona ao carrinho</div>
                 <div class="arrow">⬇</div>
-                <div class="box">Informa telefone</div>
+                <div class="box">Informa CPF</div>
                 <div class="arrow">⬇</div>
-                <div class="box">Se telefone existir: carrega cadastro<br>Se não existir: solicita nome e cadastra</div>
+                <div class="box">Se CPF existir: carrega cadastro<br>Se não existir: solicita dados e cadastra</div>
                 <div class="arrow">⬇</div>
                 <div class="box">Finaliza pedido</div>
             </div>
@@ -746,6 +746,7 @@ refactor: melhoria interna no código</pre>
 - id
 - nome
 - telefone
+- cpf
 - dataCadastro
 
 1 CLIENTE possui N PEDIDOS
@@ -790,7 +791,8 @@ PRODUTO
                 <ul>
                     <li>id — BIGINT</li>
                     <li>nome — VARCHAR(100)</li>
-                    <li>telefone — VARCHAR(20), único</li>
+                    <li>telefone — VARCHAR(20)</li>
+                    <li>cpf — VARCHAR(12), único</li>
                     <li>dataCadastro — DATETIME</li>
                 </ul>
             </div>
@@ -1064,6 +1066,7 @@ PRODUTO
                     <li>id</li>
                     <li>nome</li>
                     <li>telefone</li>
+                    <li>cpf</li>
                     <li>dataCadastro</li>
                 </ul>
             </div>
@@ -1305,7 +1308,7 @@ spring.servlet.multipart.max-request-size=10MB</pre>
                 </tr>
                 <tr>
                     <td>P05</td>
-                    <td>Como cliente, quero consultar meus pedidos pelo telefone.</td>
+                    <td>Como cliente, quero consultar meus pedidos pelo cpf.</td>
                     <td>Alta</td>
                 </tr>
                 <tr>
