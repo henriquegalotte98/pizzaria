@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,11 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* ==================================================
-   RESET
-================================================== */
-
 *{
     margin:0;
     padding:0;
@@ -34,341 +27,295 @@ body{
     line-height:1.8;
 }
 
-/* ==================================================
-   VARIÁVEIS
-================================================== */
-
 :root{
-
     --primary:#E74C3C;
     --secondary:#F39C12;
-
     --dark:#2C3E50;
     --light:#ffffff;
-
     --gray:#6c757d;
-
     --success:#27AE60;
     --warning:#FFC107;
-
+    --info:#3498DB;
     --shadow:0 5px 20px rgba(0,0,0,.08);
-
 }
 
-/* ==================================================
-   HERO
-================================================== */
-
 .hero{
-
     min-height:100vh;
-
-    background:
-    linear-gradient(
-        135deg,
-        #E74C3C,
-        #F39C12
-    );
-
+    background:linear-gradient(135deg,#E74C3C,#F39C12);
     color:white;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
     padding:40px;
-
 }
 
 .hero-content{
-
     max-width:1000px;
-
 }
 
 .hero h1{
-
     font-size:5rem;
     margin-bottom:20px;
-
 }
 
 .hero p{
-
     font-size:1.4rem;
-
 }
 
 .badges{
-
     margin-top:40px;
-
 }
 
 .badge{
-
     display:inline-block;
-
     background:white;
-
     color:#E74C3C;
-
     padding:12px 25px;
-
     border-radius:50px;
-
     font-weight:600;
-
     margin:8px;
-
 }
 
-/* ==================================================
-   MENU
-================================================== */
-
 nav{
-
     position:sticky;
     top:0;
-
     background:white;
-
     z-index:999;
-
     box-shadow:var(--shadow);
-
 }
 
 nav ul{
-
     list-style:none;
-
     display:flex;
     flex-wrap:wrap;
-
     justify-content:center;
-
 }
 
 nav a{
-
     display:block;
-
-    padding:20px;
-
+    padding:18px 14px;
     text-decoration:none;
-
     color:var(--dark);
-
     font-weight:600;
-
     transition:.3s;
-
+    font-size:.95rem;
 }
 
 nav a:hover{
-
     color:var(--primary);
-
 }
 
-/* ==================================================
-   SECTIONS
-================================================== */
-
 section{
-
     padding:80px 0;
-
 }
 
 .container{
-
-    width:90%;
-    max-width:1200px;
-
+    width:min(1200px,92%);
     margin:auto;
-
 }
 
 .section-title{
-
     text-align:center;
-
     margin-bottom:50px;
-
 }
 
 .section-title h2{
-
     font-size:3rem;
     color:var(--dark);
-
 }
 
-/* ==================================================
-   CARDS
-================================================== */
+.section-title h3{
+    color:var(--gray);
+    font-weight:500;
+}
 
 .card{
-
     background:white;
-
     padding:30px;
-
     border-radius:15px;
-
     box-shadow:var(--shadow);
-
     margin-bottom:25px;
-
 }
 
 .card h3{
-
     color:var(--primary);
-
     margin-bottom:15px;
-
 }
 
-/* ==================================================
-   GRID
-================================================== */
+.card ul,
+.card ol{
+    margin-left:25px;
+}
 
 .grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(300px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-
 }
 
-/* ==================================================
-   ALERTAS
-================================================== */
-
 .alert{
-
     padding:25px;
-
     border-radius:10px;
-
-    margin-top:20px;
-
+    margin:20px 0;
 }
 
 .alert-info{
-
     background:#d1ecf1;
     border-left:5px solid #0c5460;
-
 }
 
 .alert-warning{
-
     background:#fff3cd;
     border-left:5px solid #856404;
-
 }
 
 .alert-success{
-
     background:#d4edda;
     border-left:5px solid #155724;
-
 }
-
-/* ==================================================
-   CODE BLOCK
-================================================== */
 
 .code{
     background:#0f172a;
     color:#22c55e;
-
     padding:25px;
-
     border-radius:12px;
-
     margin-top:20px;
-
     overflow-x:auto;
-
-    font-family:
-        "Consolas",
-        "Courier New",
-        monospace;
-
+    font-family:"Cascadia Code","Fira Code","JetBrains Mono",Consolas,"Courier New",monospace;
     white-space:pre;
-
     line-height:1.5;
-
     font-size:.95rem;
-
     border:1px solid rgba(255,255,255,.1);
 }
 
-/* ==================================================
-   TIMELINE
-================================================== */
+.code::-webkit-scrollbar{
+    height:8px;
+}
+
+.code::-webkit-scrollbar-thumb{
+    background:#444;
+    border-radius:20px;
+}
+
+.front-card{
+    border-left:6px solid #3498db;
+}
+
+.back-card{
+    border-left:6px solid #27ae60;
+}
 
 .timeline{
-
     border-left:5px solid var(--primary);
-
     padding-left:30px;
-
 }
 
 .timeline-item{
-
     margin-bottom:40px;
-
 }
 
 .timeline-item h4{
-
     color:var(--primary);
-
     margin-bottom:10px;
-
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:12px;
+}
 
-footer{
-
-    background:var(--dark);
-
+table th{
+    background:#E74C3C;
     color:white;
+    padding:12px;
+    text-align:left;
+}
 
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.diagram-flow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.diagram-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.box{
+    background:white;
+    border:2px solid var(--primary);
+    border-radius:14px;
+    padding:18px 28px;
+    font-weight:700;
+    min-width:230px;
     text-align:center;
+    box-shadow:var(--shadow);
+}
 
+.box small{
+    display:block;
+    font-weight:400;
+    color:var(--gray);
+}
+
+.arrow{
+    font-size:2rem;
+    color:var(--primary);
+    font-weight:700;
+}
+
+.footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
     padding:50px;
-
 }
 
-footer h3{
-
+.footer h3{
     margin-bottom:10px;
-
 }
 
-/* ==================================================
-   RESPONSIVO
-================================================== */
+.btn-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    display:none;
+}
+
+.btn-top.show{
+    display:block;
+}
 
 @media(max-width:768px){
-
     .hero h1{
         font-size:3rem;
     }
@@ -377,3365 +324,1345 @@ footer h3{
         font-size:2rem;
     }
 
+    nav a{
+        padding:12px 10px;
+        font-size:.85rem;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    .card{
+        padding:22px;
+    }
 }
 
-</style>
+@media print{
+    nav,
+    .btn-top{
+        display:none;
+    }
 
+    .hero{
+        min-height:auto;
+        padding:50px 20px;
+    }
+
+    section{
+        page-break-inside:avoid;
+    }
+
+    .card{
+        break-inside:avoid;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ==========================================
-     CAPA
-=========================================== -->
+<header class="hero" id="topo">
+    <div class="hero-content">
+        <h1>🍕 Projeto Pizzaria</h1>
+        <p>Apostila Oficial de Scrum, GitHub, HTML, CSS, JavaScript, Spring Boot e MySQL</p>
 
-<header class="hero">
-
-<div class="hero-content">
-
-<h1>🍕 Projeto Pizzaria</h1>
-
-<p>
-
-Apostila Oficial de Scrum, GitHub, HTML, CSS,
-JavaScript, Spring Boot e MySQL
-
-</p>
-
-<div class="badges">
-
-<span class="badge">14 Alunos</span>
-
-<span class="badge">3 Sprints</span>
-
-<span class="badge">HTML/CSS/JS</span>
-
-<span class="badge">Spring Boot</span>
-
-<span class="badge">MySQL</span>
-
-</div>
-
-</div>
-
+        <div class="badges">
+            <span class="badge">14 Alunos</span>
+            <span class="badge">3 Sprints</span>
+            <span class="badge">HTML/CSS/JS</span>
+            <span class="badge">Spring Boot</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">GitHub</span>
+        </div>
+    </div>
 </header>
 
-<!-- ==========================================
-     MENU
-=========================================== -->
-
 <nav>
-
-<ul>
-
-<li><a href="#introducao">Introdução</a></li>
-
-<li><a href="#objetivo">Objetivo</a></li>
-
-<li><a href="#scrum">Scrum</a></li>
-
-<li><a href="#github">GitHub</a></li>
-
-<li><a href="#turma">Organização</a></li>
-
-</ul>
-
+    <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#scrum">Scrum</a></li>
+        <li><a href="#turma">Turma</a></li>
+        <li><a href="#arquitetura">Arquitetura</a></li>
+        <li><a href="#banco">Banco</a></li>
+        <li><a href="#frontend">Front-End</a></li>
+        <li><a href="#backend">Back-End</a></li>
+        <li><a href="#sprints">Sprints</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+    </ul>
 </nav>
 
-<!-- ==========================================
-     INTRODUÇÃO
-=========================================== -->
-
 <section id="introducao">
+    <div class="container">
+        <div class="section-title">
+            <h2>📖 Introdução</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <h3>Bem-vindo ao Projeto Pizzaria</h3>
+            <p>
+                Este projeto foi criado para que os alunos aprendam como um software real é desenvolvido utilizando
+                metodologias ágeis, divisão de tarefas, GitHub, Front-End, Back-End, banco de dados e integração entre sistemas.
+            </p>
 
-<div class="section-title">
-<h2>📖 Introdução</h2>
-</div>
+            <p>Ao final do projeto, todos terão contato com:</p>
 
-<div class="card">
+            <ul>
+                <li>Scrum</li>
+                <li>Git e GitHub</li>
+                <li>Front-End com HTML, CSS e JavaScript</li>
+                <li>Back-End com Spring Boot</li>
+                <li>Banco de Dados MySQL</li>
+                <li>APIs REST</li>
+                <li>Integração Front-End e Back-End</li>
+                <li>Trabalho em equipe</li>
+            </ul>
+        </div>
 
-<h3>Bem-vindo ao Projeto Pizzaria</h3>
-
-<p>
-
-Este projeto foi criado para que os alunos
-aprendam como um software real é desenvolvido
-utilizando metodologias ágeis.
-
-Ao final do projeto todos terão contato com:
-
-</p>
-
-<ul>
-
-<li>Scrum</li>
-
-<li>Git e GitHub</li>
-
-<li>Front-End</li>
-
-<li>Back-End</li>
-
-<li>Banco de Dados</li>
-
-<li>APIs REST</li>
-
-<li>Integração entre sistemas</li>
-
-<li>Trabalho em equipe</li>
-
-</ul>
-
-</div>
-
-<div class="alert alert-warning">
-
-<strong>Importante:</strong>
-
-O objetivo NÃO é criar uma pizzaria perfeita.
-
-O objetivo é aprender os conceitos e concluir
-um projeto funcional dentro de apenas 3 Sprints.
-
-</div>
-
-</div>
-
+        <div class="alert alert-warning">
+            <strong>Importante:</strong> o objetivo não é criar uma pizzaria perfeita. O objetivo é aprender os conceitos
+            e entregar um sistema funcional dentro de apenas 3 Sprints.
+        </div>
+    </div>
 </section>
-
-<!-- ==========================================
-     OBJETIVO
-=========================================== -->
 
 <section id="objetivo">
+    <div class="container">
+        <div class="section-title">
+            <h2>🎯 Objetivo do Projeto</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <p>Desenvolver um sistema web para uma pizzaria que permita:</p>
 
-<div class="section-title">
-<h2>🎯 Objetivo do Projeto</h2>
-</div>
+            <ul>
+                <li>Visualizar cardápio</li>
+                <li>Visualizar imagens das pizzas</li>
+                <li>Adicionar pizzas ao carrinho</li>
+                <li>Finalizar pedidos</li>
+                <li>Consultar pedidos pelo telefone</li>
+                <li>Acessar uma Área de Funcionários</li>
+                <li>Gerenciar pizzas no Dashboard</li>
+                <li>Fazer upload de imagens das pizzas</li>
+                <li>Visualizar pedidos</li>
+                <li>Alterar status dos pedidos</li>
+            </ul>
+        </div>
 
-<div class="card">
-
-<p>
-
-Desenvolver um sistema web para uma pizzaria
-que permita:
-
-</p>
-
-<ul>
-
-<li>Visualizar cardápio</li>
-
-<li>Visualizar imagens das pizzas</li>
-
-<li>Adicionar pizzas ao carrinho</li>
-
-<li>Finalizar pedidos</li>
-
-<li>Consultar pedidos pelo telefone</li>
-
-<li>Dashboard de funcionários</li>
-
-<li>CRUD de pizzas</li>
-
-<li>Controle de status dos pedidos</li>
-
-</ul>
-
-</div>
-
-</div>
-
+        <div class="alert alert-info">
+            O sistema terá somente <strong>retirada no balcão</strong>. Não haverá entrega por motoboy, pagamento real,
+            PIX integrado, autenticação avançada ou Spring Security.
+        </div>
+    </div>
 </section>
-
-<!-- ==========================================
-     SCRUM
-=========================================== -->
 
 <section id="scrum">
+    <div class="container">
+        <div class="section-title">
+            <h2>🚀 Scrum</h2>
+        </div>
 
-<div class="container">
+        <div class="grid">
+            <div class="card">
+                <h3>Product Backlog</h3>
+                <p>Lista contendo tudo que o sistema precisa ter.</p>
+            </div>
 
-<div class="section-title">
+            <div class="card">
+                <h3>Sprint</h3>
+                <p>Período de desenvolvimento. Neste projeto cada Sprint terá duração de uma aula.</p>
+            </div>
 
-<h2>🚀 Scrum</h2>
+            <div class="card">
+                <h3>Review</h3>
+                <p>Momento de apresentar o que foi desenvolvido na Sprint.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>Retrospective</h3>
+                <p>Momento de discutir o que deu certo, o que deu errado e como melhorar.</p>
+            </div>
+        </div>
 
-<div class="grid">
-
-<div class="card">
-
-<h3>Product Backlog</h3>
-
-<p>
-
-Lista contendo tudo que o sistema precisa ter.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Sprint</h3>
-
-<p>
-
-Período de desenvolvimento.
-
-Neste projeto cada Sprint terá duração
-de uma aula.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Review</h3>
-
-<p>
-
-Momento de apresentar o que foi desenvolvido.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Fluxo Scrum</h3>
-
-<div class="code">
-
-Product Backlog
-
-↓
-
-Sprint Planning
-
-↓
-
-Sprint
-
-↓
-
-Review
-
-↓
-
-Retrospective
-
-</div>
-
-</div>
-
-</div>
-
+        <div class="card">
+            <h3>Fluxo Scrum</h3>
+            <div class="diagram-flow">
+                <div class="box">Product Backlog</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Sprint Planning</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Sprint</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Sprint Review</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Retrospective</div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- ==========================================
-     GITHUB
-=========================================== -->
+<section id="turma">
+    <div class="container">
+        <div class="section-title">
+            <h2>👨‍💻 Organização da Turma</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🎯 Product Owner</h3>
+                <p>Responsável por definir os requisitos, priorizar funcionalidades e validar as entregas.</p>
+                <p>Neste projeto, o professor pode assumir esse papel.</p>
+            </div>
+
+            <div class="card">
+                <h3>📋 Scrum Master</h3>
+                <p>Responsável por organizar o projeto, acompanhar as Sprints, ajudar a equipe e remover impedimentos.</p>
+            </div>
+
+            <div class="card front-card">
+                <h3>🎨 Equipe Front-End</h3>
+                <p>7 alunos responsáveis pelas telas, layout, responsividade e integração com API.</p>
+            </div>
+
+            <div class="card back-card">
+                <h3>☕ Equipe Back-End</h3>
+                <p>7 alunos responsáveis pela API, regras de negócio, upload de imagens e banco de dados.</p>
+            </div>
+        </div>
+
+        <div class="alert alert-success">
+            Ao final das 3 Sprints, o sistema deverá estar funcionando de ponta a ponta.
+        </div>
+    </div>
+</section>
 
 <section id="github">
+    <div class="container">
+        <div class="section-title">
+            <h2>🌳 GitHub e Branches</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <h3>Fluxo de Branches</h3>
 
-<div class="section-title">
-
-<h2>🌳 GitHub</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Fluxo de Branches</h3>
-
-<div class="code">
-
-main
-
+<pre class="code">main
 │
-
 └── develop
+    │
+    ├── feature/frontend-cardapio
+    ├── feature/frontend-carrinho
+    ├── feature/frontend-dashboard
+    │
+    ├── feature/backend-produtos
+    ├── feature/backend-clientes
+    ├── feature/backend-pedidos
+    └── feature/backend-status</pre>
+        </div>
 
-      │
+        <div class="card">
+            <h3>Comandos principais</h3>
 
-      ├── feature/frontend-cardapio
-
-      ├── feature/frontend-carrinho
-
-      ├── feature/frontend-dashboard
-
-      │
-
-      ├── feature/backend-produtos
-
-      ├── feature/backend-clientes
-
-      ├── feature/backend-pedidos
-
-      └── feature/backend-status
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplo de Fluxo</h3>
-
-<div class="code">
-
-git clone
+<pre class="code">git clone URL_DO_REPOSITORIO
 
 git checkout develop
 
-git checkout -b feature/backend-produtos
+git checkout -b feature/minha-tarefa
 
 git add .
 
-git commit -m "feat: produtos"
+git commit -m "feat: adiciona minha tarefa"
 
-git push
+git push origin feature/minha-tarefa</pre>
+        </div>
 
-</div>
+        <div class="card">
+            <h3>Convenção de Commits</h3>
 
-</div>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     ORGANIZAÇÃO
-=========================================== -->
-
-<section id="turma">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>👨‍💻 Organização da Turma</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Scrum Master</h3>
-
-<p>
-
-Responsável por organizar o projeto
-e garantir que o Scrum seja seguido.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Equipe Front-End</h3>
-
-<p>
-
-7 alunos responsáveis pelas telas,
-layout e integração com API.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Equipe Back-End</h3>
-
-<p>
-
-7 alunos responsáveis pelas regras de negócio,
-API e banco de dados.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="alert alert-success">
-
-Ao final das 3 Sprints o sistema deverá estar
-funcionando de ponta a ponta.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ARQUITETURA
-================================================== -->
-
-<section id="arquitetura">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🏗 Arquitetura do Sistema</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Visão Geral</h3>
-
-<p>
-
-O sistema será dividido em três camadas principais:
-
-</p>
-
-<div class="code">
-
-┌─────────────────────┐
-│     Front-End       │
-│   HTML CSS JS       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│     Spring Boot     │
-│     API REST        │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│       MySQL         │
-└─────────────────────┘
-
-</div>
-
-<p>
-
-O Front-End faz requisições HTTP para a API.
-
-A API processa as regras de negócio e acessa
-o banco de dados.
-
-</p>
-
-</div>
-
-<div class="alert alert-info">
-
-<strong>Dica:</strong>
-
-Nenhuma tela acessará o banco diretamente.
-
-Toda comunicação acontece através da API.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     FLUXO CLIENTE
-================================================== -->
-
-<section id="fluxo-cliente">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>👤 Fluxo do Cliente</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Como o Cliente Faz um Pedido</h3>
-
-<div class="code">
-
-Acessa o Site
-
-       ↓
-
-Visualiza Cardápio
-
-       ↓
-
-Escolhe Pizzas
-
-       ↓
-
-Adiciona ao Carrinho
-
-       ↓
-
-Informa Telefone
-
-       ↓
-
-Telefone Existe?
-
-   ┌────┴────┐
-
-  SIM      NÃO
-
-   │         │
-
-Carrega   Solicita
-Cadastro    Nome
-
-   │         │
-
-   └────┬────┘
-
-        ↓
-
-Finaliza Pedido
-
-        ↓
-
-Pedido Criado
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     FLUXO FUNCIONÁRIO
-================================================== -->
-
-<section id="fluxo-funcionario">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>👨‍🍳 Fluxo do Funcionário</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Dashboard Administrativo</h3>
-
-<div class="code">
-
-Página Inicial
-
-      ↓
-
-Área de Funcionários
-
-      ↓
-
-Login
-
-      ↓
-
-Usuário: Admin
-
-Senha: admin123
-
-      ↓
-
-Dashboard
-
-      ↓
-
-┌──────────────┐
-│ Gerenciar    │
-│ Produtos     │
-└──────────────┘
-
-┌──────────────┐
-│ Gerenciar    │
-│ Pedidos      │
-└──────────────┘
-
-</div>
-
-</div>
-
-<div class="alert alert-warning">
-
-Este login é apenas para fins educacionais.
-
-Não será utilizado JWT nem Spring Security.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     FUNCIONALIDADES
-================================================== -->
-
-<section id="funcionalidades">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>⚙ Funcionalidades do Sistema</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🍕 Cardápio</h3>
-
-<ul>
-
-<li>Listar pizzas</li>
-
-<li>Exibir imagem</li>
-
-<li>Exibir preços</li>
-
-<li>Filtrar pizzas ativas</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🛒 Carrinho</h3>
-
-<ul>
-
-<li>Adicionar item</li>
-
-<li>Remover item</li>
-
-<li>Alterar quantidade</li>
-
-<li>Calcular total</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>📦 Pedidos</h3>
-
-<ul>
-
-<li>Criar pedido</li>
-
-<li>Consultar pedido</li>
-
-<li>Visualizar histórico</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>📋 Dashboard</h3>
-
-<ul>
-
-<li>CRUD Produtos</li>
-
-<li>CRUD Pedidos</li>
-
-<li>Atualizar Status</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     BANCO DE DADOS
-================================================== -->
-
-<section id="banco">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🗄 Banco de Dados</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Modelo Conceitual</h3>
-
-<div class="code">
-
-Cliente
-
-   │
-
-   └──── Pedido
-
-              │
-
-              └──── ItemPedido
-
-                           │
-
-                           └──── Produto
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     DER
-================================================== -->
-
-<section id="der">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📐 DER Simplificado</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-CLIENTE
-
-id
-nome
-telefone
-
-      │
-
-      ▼
-
-PEDIDO
-
-id
-cliente_id
-data_hora
-status
-forma_pagamento
-
-      │
-
-      ▼
-
-ITEM_PEDIDO
-
-id
-pedido_id
-produto_id
-quantidade
-preco_unitario
-
-      │
-
-      ▼
-
-PRODUTO
-
-id
-sabor
-precoP
-precoM
-precoG
-imagem
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     TABELAS
-================================================== -->
-
-<section id="tabelas">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📋 Tabelas do Banco</h2>
-
-</div>
-
-<div class="card">
-
-<h3>CLIENTES</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>nome</li>
-
-<li>telefone</li>
-
-<li>dataCadastro</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>PRODUTOS</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>sabor</li>
-
-<li>descricao</li>
-
-<li>precoP</li>
-
-<li>precoM</li>
-
-<li>precoG</li>
-
-<li>imagem</li>
-
-<li>ativo</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>PEDIDOS</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>cliente_id</li>
-
-<li>status</li>
-
-<li>formaPagamento</li>
-
-<li>horarioRetirada</li>
-
-<li>observacao</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>ITENS_PEDIDO</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>pedido_id</li>
-
-<li>produto_id</li>
-
-<li>quantidade</li>
-
-<li>precoUnitario</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     UPLOAD DE IMAGENS
-================================================== -->
-
-<section id="upload">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🖼 Upload de Imagens</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Como Funcionará</h3>
-
-<div class="code">
-
-Backend
-
-│
-
-├── uploads
-
-│    ├── calabresa.jpg
-
-│    ├── portuguesa.jpg
-
-│    └── frango.jpg
-
-</div>
-
-<p>
-
-As imagens NÃO serão salvas no MySQL.
-
-O banco armazenará apenas o nome do arquivo.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplo</h3>
-
-<div class="code">
-
-Produto
-
-imagem = "calabresa.jpg"
-
-↓
-
-Front-End
-
-<img src="/uploads/calabresa.jpg">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-     FRONT-END
-================================================== -->
-
-<section id="frontend">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🎨 Front-End</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Objetivo da Equipe Front-End</h3>
-
-<p>
-
-A equipe Front-End será responsável por construir toda a experiência visual do sistema.
-
-O objetivo é permitir que qualquer pessoa consiga:
-
-</p>
-
-<ul>
-
-<li>Visualizar o cardápio</li>
-
-<li>Adicionar pizzas ao carrinho</li>
-
-<li>Finalizar pedidos</li>
-
-<li>Consultar pedidos pelo telefone</li>
-
-<li>Acessar o dashboard administrativo</li>
-
-<li>Gerenciar pizzas</li>
-
-<li>Gerenciar pedidos</li>
-
-</ul>
-
-</div>
-
-<div class="alert alert-success">
-
-A equipe Front-End NÃO acessa o banco de dados.
-
-Toda comunicação acontece através da API do Back-End.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ESTRUTURA DE PASTAS FRONT
-================================================== -->
-
-<section id="estrutura-front">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📁 Estrutura do Projeto Front-End</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-frontend/
-
-│
-
-├── index.html
-
-├── meus-pedidos.html
-
-├── login.html
-
-├── dashboard.html
-
-│
-
-├── css
-
-│   ├── style.css
-
-│   ├── dashboard.css
-
-│   └── responsive.css
-
-│
-
-├── js
-
-│   ├── api.js
-
-│   ├── cardapio.js
-
-│   ├── carrinho.js
-
-│   ├── pedidos.js
-
-│   └── dashboard.js
-
-│
-
-├── assets
-
-│   ├── logo.png
-
-│   └── imagens
-
-│
-
-└── components
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     TELA INICIAL
-================================================== -->
-
-<section id="pagina-inicial">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🏠 Página Inicial</h2>
-
-</div>
-
-<div class="card">
-
-<h3>O que deve existir</h3>
-
-<ul>
-
-<li>Logo da pizzaria</li>
-
-<li>Banner principal</li>
-
-<li>Botão Ver Cardápio</li>
-
-<li>Botão Meus Pedidos</li>
-
-<li>Card Área de Funcionários</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplo Visual</h3>
-
-<div class="code">
-
-+----------------------------------+
-
-      PIZZARIA DO SEU ZÉ
-
-      As melhores pizzas
-
-      [ Ver Cardápio ]
-
-      [ Meus Pedidos ]
-
-+----------------------------------+
-
-Área de Funcionários
-
-[ Entrar ]
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CARDÁPIO
-================================================== -->
-
-<section id="cardapio">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🍕 Cardápio</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Informações exibidas</h3>
-
-<ul>
-
-<li>Imagem da pizza</li>
-
-<li>Nome da pizza</li>
-
-<li>Descrição</li>
-
-<li>Preço Pequena</li>
-
-<li>Preço Média</li>
-
-<li>Preço Grande</li>
-
-<li>Botão Adicionar ao Carrinho</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplo de Card</h3>
-
-<div class="code">
-
-┌──────────────────────────┐
-
-   [ IMAGEM ]
-
-   Pizza Calabresa
-
-   Molho, queijo e calabresa
-
-   P: R$ 35,00
-
-   M: R$ 45,00
-
-   G: R$ 55,00
-
-   [ Adicionar ]
-
-└──────────────────────────┘
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     FETCH PRODUTOS
-================================================== -->
-
-<section id="fetch-produtos">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🌐 Consumindo a API</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Buscar Produtos</h3>
-
-<div class="code">
-
-fetch("http://localhost:8080/api/produtos")
-
-.then(response => response.json())
-
-.then(produtos => {
-
-    console.log(produtos);
-
-});
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CARRINHO
-================================================== -->
-
-<section id="carrinho">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🛒 Carrinho</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Funcionalidades</h3>
-
-<ul>
-
-<li>Adicionar pizza</li>
-
-<li>Remover pizza</li>
-
-<li>Alterar quantidade</li>
-
-<li>Calcular total</li>
-
-<li>Finalizar pedido</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Fluxo</h3>
-
-<div class="code">
-
-Produto
-
-↓
-
-Adicionar
-
-↓
-
-Carrinho
-
-↓
-
-Total
-
-↓
-
-Finalizar Pedido
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     LOGIN FUNCIONÁRIO
-================================================== -->
-
-<section id="login-funcionario">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🔐 Área de Funcionários</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Login Padrão</h3>
-
-<div class="code">
-
-Usuário
-
-Admin
-
-Senha
-
-admin123
-
-</div>
-
-</div>
-
-<div class="alert alert-warning">
-
-Este login é apenas para fins educacionais.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     DASHBOARD
-================================================== -->
-
-<section id="dashboard">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📊 Dashboard</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Módulos</h3>
-
-<ul>
-
-<li>Gerenciar Produtos</li>
-
-<li>Gerenciar Pedidos</li>
-
-<li>Alterar Status</li>
-
-<li>Upload de Imagens</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplo Visual</h3>
-
-<div class="code">
-
-Dashboard
-
-├── Produtos
-
-├── Pedidos
-
-├── Upload
-
-└── Sair
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CRUD PRODUTOS
-================================================== -->
-
-<section id="crud-produtos">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🍕 CRUD de Produtos</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Operações</h3>
-
-<ul>
-
-<li>Cadastrar Pizza</li>
-
-<li>Editar Pizza</li>
-
-<li>Excluir Pizza</li>
-
-<li>Ativar/Desativar Pizza</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Campos</h3>
-
-<ul>
-
-<li>Nome</li>
-
-<li>Descrição</li>
-
-<li>Preço Pequeno</li>
-
-<li>Preço Médio</li>
-
-<li>Preço Grande</li>
-
-<li>Imagem</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     MEUS PEDIDOS
-================================================== -->
-
-<section id="meus-pedidos">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📦 Meus Pedidos</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Como funciona</h3>
-
-<p>
-
-O cliente informa apenas o telefone.
-
-Se houver pedidos associados ao telefone,
-o sistema exibe o histórico.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-Telefone
-
-↓
-
-Buscar
-
-↓
-
-GET /api/pedidos/cliente/{telefone}
-
-↓
-
-Lista de Pedidos
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     RESPONSABILIDADES
-================================================== -->
-
-<section id="responsabilidades-front">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>👨‍💻 Responsabilidades da Equipe Front-End</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Sprint 1</h3>
-
-<ul>
-
-<li>Página Inicial</li>
-
-<li>Cardápio</li>
-
-<li>Layout</li>
-
-<li>Responsividade</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Sprint 2</h3>
-
-<ul>
-
-<li>Carrinho</li>
-
-<li>Finalização</li>
-
-<li>Meus Pedidos</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Sprint 3</h3>
-
-<ul>
-
-<li>Dashboard</li>
-
-<li>CRUD Produtos</li>
-
-<li>CRUD Pedidos</li>
-
-<li>Upload de Imagens</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CRITÉRIO DE ACEITAÇÃO FRONT
-================================================== -->
-
-<section id="aceitacao-front">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>✅ Critério de Sucesso do Front-End</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>Todas as páginas funcionando</li>
-
-<li>Layout responsivo</li>
-
-<li>Consumo correto da API</li>
-
-<li>Carrinho funcionando</li>
-
-<li>Dashboard funcionando</li>
-
-<li>Upload funcionando</li>
-
-<li>Sem erros no Console</li>
-
-</ul>
-
-</div>
-
-<div class="alert alert-success">
-
-Se o usuário conseguir fazer um pedido completo
-e o funcionário conseguir gerenciar o sistema,
-a missão do Front-End foi cumprida.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     BACK-END
-================================================== -->
-
-<section id="backend">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>☕ Back-End</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Objetivo da Equipe Back-End</h3>
-
-<p>
-
-A equipe Back-End será responsável por criar
-toda a inteligência do sistema.
-
-Tudo que envolve:
-
-</p>
-
-<ul>
-
-<li>Banco de Dados</li>
-
-<li>Regras de Negócio</li>
-
-<li>API REST</li>
-
-<li>Validações</li>
-
-<li>Upload de Imagens</li>
-
-<li>Persistência de Dados</li>
-
-</ul>
-
-</div>
-
-<div class="alert alert-success">
-
-O Front-End nunca acessará o banco diretamente.
-
-Toda comunicação ocorre através da API.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ESTRUTURA DO PROJETO
-================================================== -->
-
-<section id="estrutura-backend">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📁 Estrutura do Projeto Spring Boot</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-src/main/java
-
-com.pizzaria
-
-│
-
-├── controller
-
-│   ├── ProdutoController
-
-│   ├── ClienteController
-
-│   └── PedidoController
-
-│
-
-├── service
-
-│   ├── ProdutoService
-
-│   ├── ClienteService
-
-│   └── PedidoService
-
-│
-
-├── repository
-
-│   ├── ProdutoRepository
-
-│   ├── ClienteRepository
-
-│   ├── PedidoRepository
-
-│   └── ItemPedidoRepository
-
-│
-
-├── model
-
-│   ├── Produto
-
-│   ├── Cliente
-
-│   ├── Pedido
-
-│   └── ItemPedido
-
-│
-
-├── dto
-
-│   ├── PedidoRequestDTO
-
-│   ├── PedidoResponseDTO
-
-│   └── ProdutoDTO
-
-│
-
-└── config
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ENTIDADES
-================================================== -->
-
-<section id="entidades">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🗄 Entidades do Sistema</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Cliente</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>nome</li>
-
-<li>telefone</li>
-
-<li>dataCadastro</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Produto</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>nome</li>
-
-<li>descricao</li>
-
-<li>precoPequena</li>
-
-<li>precoMedia</li>
-
-<li>precoGrande</li>
-
-<li>imagem</li>
-
-<li>ativo</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Pedido</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>cliente</li>
-
-<li>dataPedido</li>
-
-<li>status</li>
-
-<li>formaPagamento</li>
-
-<li>observacao</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>ItemPedido</h3>
-
-<ul>
-
-<li>id</li>
-
-<li>pedido</li>
-
-<li>produto</li>
-
-<li>quantidade</li>
-
-<li>tamanho</li>
-
-<li>precoUnitario</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     RELACIONAMENTOS
-================================================== -->
-
-<section id="relacionamentos">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🔗 Relacionamentos</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-Cliente
-
- 1
-
- │
-
- N
-
-Pedido
-
- 1
-
- │
-
- N
-
-ItemPedido
-
- N
-
- │
-
- 1
-
-Produto
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ENUMS
-================================================== -->
-
-<section id="enums">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📋 ENUMS</h2>
-
-</div>
-
-<div class="card">
-
-<h3>StatusPedido</h3>
-
-<div class="code">
-
-PENDENTE
-
-PRONTO
-
-ENTREGUE
-
-NAO_VEIO
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>FormaPagamento</h3>
-
-<div class="code">
-
-PIX
-
-DINHEIRO
-
-CARTAO
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>TamanhoPizza</h3>
-
-<div class="code">
-
-P
-
-M
-
-G
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     REPOSITORY
-================================================== -->
-
-<section id="repository">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📂 Repository</h2>
-
-</div>
-
-<div class="card">
-
-<p>
-
-Repositories serão responsáveis
-pela comunicação com o banco.
-
-</p>
-
-<div class="code">
-
-public interface ProdutoRepository
-extends JpaRepository&lt;Produto, Long&gt;
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     SERVICE
-================================================== -->
-
-<section id="service">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>⚙ Camada Service</h2>
-
-</div>
-
-<div class="card">
-
-<p>
-
-Toda regra de negócio deve ficar aqui.
-
-Nunca colocar regra dentro do Controller.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Exemplos de Regras</h3>
-
-<ul>
-
-<li>Validar cliente</li>
-
-<li>Criar pedido</li>
-
-<li>Calcular valor total</li>
-
-<li>Atualizar status</li>
-
-<li>Validar transições</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CONTROLLERS
-================================================== -->
-
-<section id="controllers">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🌐 Controllers</h2>
-
-</div>
-
-<div class="card">
-
-<h3>ProdutoController</h3>
-
-<ul>
-
-<li>GET produtos</li>
-
-<li>POST produto</li>
-
-<li>PUT produto</li>
-
-<li>DELETE produto</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>PedidoController</h3>
-
-<ul>
-
-<li>Criar Pedido</li>
-
-<li>Listar Pedidos</li>
-
-<li>Atualizar Status</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>ClienteController</h3>
-
-<ul>
-
-<li>Cadastrar Cliente</li>
-
-<li>Buscar Cliente</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     ENDPOINTS
-================================================== -->
-
-<section id="endpoints">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📡 Endpoints da API</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-GET /api/produtos
-
-POST /api/produtos
-
-PUT /api/produtos/{id}
-
-DELETE /api/produtos/{id}
-
-GET /api/clientes
-
-POST /api/clientes
-
-GET /api/pedidos
-
-POST /api/pedidos
-
-PUT /api/pedidos/{id}/status
-
-GET /api/pedidos/cliente/{telefone}
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     JSON PEDIDO
-================================================== -->
-
-<section id="json-pedido">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📨 Exemplo de Pedido</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-{
-  "telefone":"48999999999",
-
-  "nome":"Henrique",
-
-  "formaPagamento":"PIX",
-
-  "itens":[
-    {
-      "produtoId":1,
-      "tamanho":"G",
-      "quantidade":2
-    }
-  ]
-}
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     UPLOAD
-================================================== -->
-
-<section id="upload-back">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🖼 Upload de Imagens</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Estrutura</h3>
-
-<div class="code">
-
-uploads/
-
-├── calabresa.jpg
-
-├── portuguesa.jpg
-
-└── frango.jpg
-
-</div>
-
-</div>
-
-<div class="card">
-
-<p>
-
-O banco armazenará apenas o nome da imagem.
-
-</p>
-
-<div class="code">
-
-imagem
-
-=
-
-"calabresa.jpg"
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     MYSQL
-================================================== -->
-
-<section id="mysql">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🐬 MySQL</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-CREATE DATABASE pizzaria_db;
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>application.properties</h3>
-
-<div class="code">
-
-spring.datasource.url=
-jdbc:mysql://localhost:3306/pizzaria_db
-
-spring.datasource.username=root
-
-spring.datasource.password=senha
-
-spring.jpa.hibernate.ddl-auto=update
-
-spring.jpa.show-sql=true
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     MAVEN
-================================================== -->
-
-<section id="maven">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📦 Dependências Maven</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>Spring Web</li>
-
-<li>Spring Data JPA</li>
-
-<li>MySQL Driver</li>
-
-<li>Validation</li>
-
-<li>Lombok</li>
-
-<li>DevTools</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     REGRAS DE NEGÓCIO
-================================================== -->
-
-<section id="regras">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📜 Regras de Negócio</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>Cliente pode ser criado automaticamente</li>
-
-<li>Pedido pode ter vários itens</li>
-
-<li>Produto inativo não aparece</li>
-
-<li>Preço deve ser congelado no pedido</li>
-
-<li>Status não pode voltar</li>
-
-<li>NAO_VEIO apenas após tempo definido</li>
-
-<li>Telefone identifica o cliente</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     RESPONSABILIDADES BACK-END
-================================================== -->
-
-<section id="responsabilidades-back">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>👨‍💻 Responsabilidades da Equipe Back-End</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Sprint 1</h3>
-
-<ul>
-
-<li>Projeto Spring Boot</li>
-
-<li>MySQL</li>
-
-<li>Produto</li>
-
-<li>Cliente</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Sprint 2</h3>
-
-<ul>
-
-<li>Pedido</li>
-
-<li>ItemPedido</li>
-
-<li>Regras</li>
-
-<li>DTOs</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Sprint 3</h3>
-
-<ul>
-
-<li>Dashboard</li>
-
-<li>Status</li>
-
-<li>Upload</li>
-
-<li>CRUD completo</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     CRITÉRIO DE SUCESSO
-================================================== -->
-
-<section id="criterio-back">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>✅ Critério de Sucesso do Back-End</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>Banco conectado</li>
-
-<li>Tabelas criadas</li>
-
-<li>Endpoints funcionando</li>
-
-<li>Upload funcionando</li>
-
-<li>Pedidos sendo salvos</li>
-
-<li>Status funcionando</li>
-
-<li>Front-End consumindo API</li>
-
-</ul>
-
-</div>
-
-<div class="alert alert-success">
-
-Se o Front-End conseguir consumir a API
-e todas as regras funcionarem corretamente,
-o Back-End atingiu o objetivo do projeto.
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<!-- ==================================================
-     PRODUCT BACKLOG
-================================================== -->
-
-<section id="backlog">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📋 Product Backlog</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Histórias de Usuário</h3>
-
-<table style="width:100%;border-collapse:collapse">
-
-<tr style="background:#E74C3C;color:white">
-<th>ID</th>
-<th>História</th>
-<th>Prioridade</th>
-</tr>
-
-<tr>
-<td>P01</td>
-<td>Como cliente, quero visualizar o cardápio.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P02</td>
-<td>Como cliente, quero adicionar pizzas ao carrinho.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P03</td>
-<td>Como cliente, quero finalizar pedidos.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P04</td>
-<td>Como cliente, quero consultar meus pedidos.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P05</td>
-<td>Como funcionário, quero visualizar pedidos.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P06</td>
-<td>Como funcionário, quero alterar status.</td>
-<td>Alta</td>
-</tr>
-
-<tr>
-<td>P07</td>
-<td>Como funcionário, quero cadastrar pizzas.</td>
-<td>Média</td>
-</tr>
-
-<tr>
-<td>P08</td>
-<td>Como funcionário, quero atualizar imagens.</td>
-<td>Média</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     SPRINT 1
-================================================== -->
-
-<section id="sprint1">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🏁 Sprint 1</h2>
-
-<h3>Fundação do Projeto</h3>
-
-</div>
-
-<div class="alert alert-info">
-
-Objetivo: colocar a estrutura do sistema de pé.
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🎨 Front-End</h3>
-
-<ul>
-
-<li>Criar layout geral</li>
-
-<li>Página inicial</li>
-
-<li>Cardápio</li>
-
-<li>Área de Funcionários</li>
-
-<li>Responsividade</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>☕ Back-End</h3>
-
-<ul>
-
-<li>Criar projeto Spring Boot</li>
-
-<li>Configurar MySQL</li>
-
-<li>Criar Produto</li>
-
-<li>Criar Cliente</li>
-
-<li>GET Produtos</li>
-
-<li>POST Produto</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Entrega Esperada</h3>
-
-<p>
-
-O cliente já consegue visualizar pizzas vindas da API.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     SPRINT 2
-================================================== -->
-
-<section id="sprint2">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🏁 Sprint 2</h2>
-
-<h3>Pedidos e Carrinho</h3>
-
-</div>
-
-<div class="alert alert-info">
-
-Objetivo: permitir pedidos completos.
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🎨 Front-End</h3>
-
-<ul>
-
-<li>Carrinho</li>
-
-<li>Finalização</li>
-
-<li>Consulta por telefone</li>
-
-<li>Tela Meus Pedidos</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>☕ Back-End</h3>
-
-<ul>
-
-<li>Pedido</li>
-
-<li>ItemPedido</li>
-
-<li>POST Pedido</li>
-
-<li>GET Pedido</li>
-
-<li>Validações</li>
-
-<li>DTOs</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Entrega Esperada</h3>
-
-<p>
-
-Cliente consegue realizar um pedido completo.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     SPRINT 3
-================================================== -->
-
-<section id="sprint3">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🏁 Sprint 3</h2>
-
-<h3>Dashboard e Administração</h3>
-
-</div>
-
-<div class="alert alert-info">
-
-Objetivo: concluir o sistema.
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🎨 Front-End</h3>
-
-<ul>
-
-<li>Dashboard</li>
-
-<li>CRUD Produtos</li>
-
-<li>CRUD Pedidos</li>
-
-<li>Upload de Imagens</li>
-
-<li>Refinamento visual</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>☕ Back-End</h3>
-
-<ul>
-
-<li>Status Pedido</li>
-
-<li>Upload</li>
-
-<li>CRUD completo</li>
-
-<li>Tratamento de erros</li>
-
-<li>Integração final</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Entrega Esperada</h3>
-
-<p>
-
-Sistema funcionando de ponta a ponta.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==================================================
-     GIT FLOW
-================================================== -->
-
-<section id="gitflow">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🌳 Fluxo GitHub</h2>
-
-</div>
-
-<div class="card">
-
-<div class="code">
-
-main
-
-↓
-
-develop
-
-↓
-
-feature/minha-tarefa
-
-↓
-
-commit
-
-↓
-
-push
-
-↓
-
-pull request
-
-↓
-
-merge
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Convenção de Commits</h3>
-
-<div class="code">
-
-feat: nova funcionalidade
+<pre class="code">feat: nova funcionalidade
 
 fix: correção de bug
 
 docs: documentação
 
-style: css/layout
+style: alteração visual ou CSS
 
-refactor: reorganização
-
-</div>
-
-</div>
-
-</div>
-
+refactor: melhoria interna no código</pre>
+        </div>
+    </div>
 </section>
 
-<!-- ==================================================
-     DEFINITION OF DONE
-================================================== -->
+<section id="arquitetura">
+    <div class="container">
+        <div class="section-title">
+            <h2>🏗 Arquitetura do Sistema</h2>
+        </div>
 
-<section id="dod">
+        <div class="card">
+            <h3>Visão Geral</h3>
 
-<div class="container">
+            <div class="diagram-flow">
+                <div class="box">Front-End <small>HTML • CSS • JavaScript</small></div>
+                <div class="arrow">⬇ HTTP / JSON</div>
+                <div class="box">Back-End <small>Spring Boot • API REST</small></div>
+                <div class="arrow">⬇ JPA</div>
+                <div class="box">Banco de Dados <small>MySQL</small></div>
+            </div>
 
-<div class="section-title">
+            <p>
+                O Front-End faz requisições HTTP para a API. A API processa as regras de negócio e acessa o banco de dados.
+            </p>
+        </div>
 
-<h2>✅ Definition of Done</h2>
-
-</div>
-
-<div class="card">
-
-<p>
-
-Uma tarefa só é considerada concluída quando:
-
-</p>
-
-<ul>
-
-<li>Código funcionando</li>
-
-<li>Sem erros</li>
-
-<li>Commit realizado</li>
-
-<li>Push realizado</li>
-
-<li>Testado</li>
-
-<li>Integrado ao projeto</li>
-
-</ul>
-
-</div>
-
-</div>
-
+        <div class="alert alert-info">
+            Nenhuma tela acessará o banco diretamente. Toda comunicação acontece através da API.
+        </div>
+    </div>
 </section>
 
-<!-- ==================================================
-     CHECKLIST FINAL
-================================================== -->
+<section id="fluxos">
+    <div class="container">
+        <div class="section-title">
+            <h2>👤 Fluxos Principais</h2>
+        </div>
+
+        <div class="card">
+            <h3>Fluxo do Cliente</h3>
+
+            <div class="diagram-flow">
+                <div class="box">Acessa o site</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Visualiza o cardápio</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Escolhe pizzas</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Adiciona ao carrinho</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Informa telefone</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Se telefone existir: carrega cadastro<br>Se não existir: solicita nome e cadastra</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Finaliza pedido</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Fluxo do Funcionário</h3>
+
+            <div class="diagram-flow">
+                <div class="box">Página Inicial</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Área de Funcionários</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Login: Admin<br>Senha: admin123</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Dashboard</div>
+                <div class="arrow">⬇</div>
+                <div class="box">Gerenciar Produtos e Pedidos</div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning">
+            Este login é apenas para fins educacionais. Não será utilizado JWT, Spring Security ou banco de usuários.
+        </div>
+    </div>
+</section>
+
+<section id="funcionalidades">
+    <div class="container">
+        <div class="section-title">
+            <h2>⚙ Funcionalidades do Sistema</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🍕 Cardápio</h3>
+                <ul>
+                    <li>Listar pizzas</li>
+                    <li>Exibir imagem</li>
+                    <li>Exibir preços P, M e G</li>
+                    <li>Filtrar pizzas ativas</li>
+                    <li>Exibir descrição</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🛒 Carrinho</h3>
+                <ul>
+                    <li>Adicionar item</li>
+                    <li>Remover item</li>
+                    <li>Alterar quantidade</li>
+                    <li>Calcular total</li>
+                    <li>Finalizar pedido</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📦 Pedidos</h3>
+                <ul>
+                    <li>Criar pedido</li>
+                    <li>Consultar pedido</li>
+                    <li>Visualizar histórico</li>
+                    <li>Atualizar status</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📋 Dashboard</h3>
+                <ul>
+                    <li>CRUD Produtos</li>
+                    <li>CRUD Pedidos</li>
+                    <li>Upload de Imagens</li>
+                    <li>Atualizar Status</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="banco">
+    <div class="container">
+        <div class="section-title">
+            <h2>🗄 Banco de Dados</h2>
+        </div>
+
+        <div class="card">
+            <h3>Modelo Conceitual</h3>
+
+            <div class="diagram-flow">
+                <div class="box">Cliente <small>possui vários pedidos</small></div>
+                <div class="arrow">⬇ 1:N</div>
+                <div class="box">Pedido <small>possui vários itens</small></div>
+                <div class="arrow">⬇ 1:N</div>
+                <div class="box">ItemPedido <small>representa uma pizza dentro do pedido</small></div>
+                <div class="arrow">⬇ N:1</div>
+                <div class="box">Produto <small>pizza cadastrada no cardápio</small></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>DER Simplificado</h3>
+
+<pre class="code">CLIENTE
+- id
+- nome
+- telefone
+- dataCadastro
+
+1 CLIENTE possui N PEDIDOS
+
+PEDIDO
+- id
+- cliente_id
+- dataHoraPedido
+- horarioRetirada
+- status
+- formaPagamento
+- observacao
+- valorTotal
+
+1 PEDIDO possui N ITENS_PEDIDO
+
+ITEM_PEDIDO
+- id
+- pedido_id
+- produto_id
+- tamanho
+- quantidade
+- precoUnitario
+- subtotal
+
+N ITENS_PEDIDO pertencem a 1 PRODUTO
+
+PRODUTO
+- id
+- nome
+- descricao
+- precoPequena
+- precoMedia
+- precoGrande
+- imagem
+- ativo</pre>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>CLIENTES</h3>
+                <ul>
+                    <li>id — BIGINT</li>
+                    <li>nome — VARCHAR(100)</li>
+                    <li>telefone — VARCHAR(20), único</li>
+                    <li>dataCadastro — DATETIME</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>PRODUTOS</h3>
+                <ul>
+                    <li>id — BIGINT</li>
+                    <li>nome — VARCHAR(100)</li>
+                    <li>descricao — TEXT</li>
+                    <li>precoPequena — DECIMAL(10,2)</li>
+                    <li>precoMedia — DECIMAL(10,2)</li>
+                    <li>precoGrande — DECIMAL(10,2)</li>
+                    <li>imagem — VARCHAR(255)</li>
+                    <li>ativo — BOOLEAN</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>PEDIDOS</h3>
+                <ul>
+                    <li>id — BIGINT</li>
+                    <li>cliente_id — BIGINT</li>
+                    <li>dataHoraPedido — DATETIME</li>
+                    <li>horarioRetirada — TIME</li>
+                    <li>status — VARCHAR(30)</li>
+                    <li>formaPagamento — VARCHAR(20)</li>
+                    <li>observacao — TEXT</li>
+                    <li>valorTotal — DECIMAL(10,2)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>ITENS_PEDIDO</h3>
+                <ul>
+                    <li>id — BIGINT</li>
+                    <li>pedido_id — BIGINT</li>
+                    <li>produto_id — BIGINT</li>
+                    <li>tamanho — CHAR(1)</li>
+                    <li>quantidade — INT</li>
+                    <li>precoUnitario — DECIMAL(10,2)</li>
+                    <li>subtotal — DECIMAL(10,2)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="upload">
+    <div class="container">
+        <div class="section-title">
+            <h2>🖼 Upload de Imagens</h2>
+        </div>
+
+        <div class="card">
+            <h3>Como funcionará</h3>
+
+<pre class="code">backend/
+│
+├── uploads/
+│   ├── calabresa.jpg
+│   ├── portuguesa.jpg
+│   └── frango-catupiry.jpg
+│
+├── src/
+└── pom.xml</pre>
+
+            <p>
+                As imagens não serão salvas no MySQL. O banco armazenará apenas o nome do arquivo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Exemplo de retorno da API</h3>
+
+<pre class="code">{
+  "id": 1,
+  "nome": "Calabresa",
+  "descricao": "Molho, queijo, calabresa e cebola",
+  "precoPequena": 35.00,
+  "precoMedia": 45.00,
+  "precoGrande": 55.00,
+  "imagem": "calabresa.jpg",
+  "ativo": true
+}</pre>
+        </div>
+    </div>
+</section>
+
+<section id="frontend">
+    <div class="container">
+        <div class="section-title">
+            <h2>🎨 Front-End</h2>
+        </div>
+
+        <div class="card front-card">
+            <h3>Objetivo da Equipe Front-End</h3>
+            <p>
+                A equipe Front-End será responsável por construir toda a experiência visual do sistema,
+                garantindo uma interface simples, intuitiva e funcional para clientes e funcionários.
+            </p>
+
+            <ul>
+                <li>Visualizar cardápio</li>
+                <li>Adicionar pizzas ao carrinho</li>
+                <li>Finalizar pedidos</li>
+                <li>Consultar pedidos pelo telefone</li>
+                <li>Acessar o dashboard administrativo</li>
+                <li>Gerenciar pizzas</li>
+                <li>Gerenciar pedidos</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Estrutura sugerida</h3>
+
+<pre class="code">frontend/
+│
+├── index.html
+├── meus-pedidos.html
+├── login.html
+├── dashboard.html
+│
+├── css/
+│   ├── style.css
+│   ├── dashboard.css
+│   └── responsive.css
+│
+├── js/
+│   ├── api.js
+│   ├── cardapio.js
+│   ├── carrinho.js
+│   ├── pedidos.js
+│   └── dashboard.js
+│
+└── assets/</pre>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🏠 Página Inicial</h3>
+                <ul>
+                    <li>Logo da pizzaria</li>
+                    <li>Banner principal</li>
+                    <li>Botão Ver Cardápio</li>
+                    <li>Botão Meus Pedidos</li>
+                    <li>Card Área de Funcionários</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🍕 Cardápio</h3>
+                <ul>
+                    <li>Imagem da pizza</li>
+                    <li>Nome</li>
+                    <li>Descrição</li>
+                    <li>Preço P, M e G</li>
+                    <li>Botão Adicionar ao Carrinho</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🛒 Carrinho</h3>
+                <ul>
+                    <li>Adicionar pizza</li>
+                    <li>Remover pizza</li>
+                    <li>Alterar quantidade</li>
+                    <li>Calcular total</li>
+                    <li>Finalizar pedido</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📊 Dashboard</h3>
+                <ul>
+                    <li>Gerenciar Produtos</li>
+                    <li>Gerenciar Pedidos</li>
+                    <li>Atualizar status dos pedidos</li>
+                    <li>Upload de Imagens</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Exemplo de consumo da API</h3>
+
+<pre class="code">fetch("http://localhost:8080/api/produtos")
+  .then(response => response.json())
+  .then(produtos => {
+      console.log(produtos);
+  });</pre>
+        </div>
+
+        <div class="card">
+            <h3>Critério de Sucesso do Front-End</h3>
+            <ul>
+                <li>Todas as páginas funcionando</li>
+                <li>Layout responsivo</li>
+                <li>Consumo correto da API</li>
+                <li>Carrinho funcionando</li>
+                <li>Dashboard funcionando</li>
+                <li>Upload funcionando</li>
+                <li>Sem erros no Console</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="backend">
+    <div class="container">
+        <div class="section-title">
+            <h2>☕ Back-End</h2>
+        </div>
+
+        <div class="card back-card">
+            <h3>Objetivo da Equipe Back-End</h3>
+            <p>
+                A equipe Back-End será responsável por criar toda a inteligência do sistema:
+                regras de negócio, API REST, persistência dos dados, upload de imagens e validações.
+            </p>
+
+            <ul>
+                <li>Banco de Dados</li>
+                <li>Regras de Negócio</li>
+                <li>API REST</li>
+                <li>Validações</li>
+                <li>Upload de Imagens</li>
+                <li>Persistência de Dados</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Estrutura sugerida</h3>
+
+<pre class="code">src/main/java/com/pizzaria
+│
+├── controller
+│   ├── ProdutoController.java
+│   ├── ClienteController.java
+│   └── PedidoController.java
+│
+├── service
+│   ├── ProdutoService.java
+│   ├── ClienteService.java
+│   └── PedidoService.java
+│
+├── repository
+│   ├── ProdutoRepository.java
+│   ├── ClienteRepository.java
+│   ├── PedidoRepository.java
+│   └── ItemPedidoRepository.java
+│
+├── model
+│   ├── Produto.java
+│   ├── Cliente.java
+│   ├── Pedido.java
+│   └── ItemPedido.java
+│
+├── dto
+│   ├── PedidoRequestDTO.java
+│   ├── PedidoResponseDTO.java
+│   └── ProdutoDTO.java
+│
+└── config</pre>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Cliente</h3>
+                <ul>
+                    <li>id</li>
+                    <li>nome</li>
+                    <li>telefone</li>
+                    <li>dataCadastro</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Produto</h3>
+                <ul>
+                    <li>id</li>
+                    <li>nome</li>
+                    <li>descricao</li>
+                    <li>precoPequena</li>
+                    <li>precoMedia</li>
+                    <li>precoGrande</li>
+                    <li>imagem</li>
+                    <li>ativo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Pedido</h3>
+                <ul>
+                    <li>id</li>
+                    <li>cliente</li>
+                    <li>dataPedido</li>
+                    <li>horarioRetirada</li>
+                    <li>status</li>
+                    <li>formaPagamento</li>
+                    <li>observacao</li>
+                    <li>valorTotal</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>ItemPedido</h3>
+                <ul>
+                    <li>id</li>
+                    <li>pedido</li>
+                    <li>produto</li>
+                    <li>quantidade</li>
+                    <li>tamanho</li>
+                    <li>precoUnitario</li>
+                    <li>subtotal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>ENUMS</h3>
+
+<pre class="code">StatusPedido:
+- PENDENTE
+- PRONTO
+- ENTREGUE
+- NAO_VEIO
+
+FormaPagamento:
+- PIX
+- DINHEIRO
+- CARTAO
+
+TamanhoPizza:
+- P
+- M
+- G</pre>
+        </div>
+
+        <div class="card">
+            <h3>Endpoints principais</h3>
+
+<pre class="code">GET    /api/produtos
+POST   /api/produtos
+PUT    /api/produtos/{id}
+DELETE /api/produtos/{id}
+
+GET    /api/clientes/telefone/{telefone}
+POST   /api/clientes
+
+GET    /api/pedidos
+POST   /api/pedidos
+PUT    /api/pedidos/{id}/status
+GET    /api/pedidos/cliente/{telefone}
+
+POST   /api/upload</pre>
+        </div>
+
+        <div class="card">
+            <h3>Exemplo JSON de pedido</h3>
+
+<pre class="code">{
+  "telefone": "48999999999",
+  "nome": "Ana Silva",
+  "formaPagamento": "PIX",
+  "horarioRetirada": "20:30",
+  "observacao": "Sem cebola na primeira pizza",
+  "itens": [
+    {
+      "produtoId": 1,
+      "tamanho": "G",
+      "quantidade": 2
+    },
+    {
+      "produtoId": 3,
+      "tamanho": "M",
+      "quantidade": 1
+    }
+  ]
+}</pre>
+        </div>
+
+        <div class="card">
+            <h3>application.properties</h3>
+
+<pre class="code">spring.datasource.url=jdbc:mysql://localhost:3306/pizzaria_db
+spring.datasource.username=root
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB</pre>
+        </div>
+
+        <div class="card">
+            <h3>Dependências Maven</h3>
+            <ul>
+                <li>Spring Web</li>
+                <li>Spring Data JPA</li>
+                <li>MySQL Driver</li>
+                <li>Validation</li>
+                <li>Lombok</li>
+                <li>DevTools</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Regras de Negócio</h3>
+            <ul>
+                <li>Cliente é identificado pelo telefone.</li>
+                <li>Telefone deve ser único.</li>
+                <li>Cliente não pode ser cadastrado sem nome.</li>
+                <li>Produto inativo não deve aparecer no cardápio.</li>
+                <li>Os preços P, M e G devem ser maiores que zero.</li>
+                <li>Um pedido deve possuir pelo menos um item.</li>
+                <li>O valor total deve ser calculado automaticamente.</li>
+                <li>O status inicial do pedido deve ser PENDENTE.</li>
+                <li>A observação do pedido é opcional.</li>
+                <li>A quantidade do item deve ser maior que zero.</li>
+                <li>O tamanho da pizza deve ser P, M ou G.</li>
+                <li>O preço do item deve ser copiado no momento do pedido.</li>
+                <li>Não é permitido voltar status anterior.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Critério de Sucesso do Back-End</h3>
+            <ul>
+                <li>Banco de dados configurado e conectado</li>
+                <li>API funcionando corretamente</li>
+                <li>CRUDs implementados</li>
+                <li>Regras de negócio aplicadas</li>
+                <li>Pedidos sendo registrados e consultados</li>
+                <li>Status dos pedidos funcionando</li>
+                <li>Integração com o Front-End concluída</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="status-pedido">
+    <div class="container">
+        <div class="section-title">
+            <h2>📦 Fluxo de Status do Pedido</h2>
+        </div>
+
+        <div class="card">
+            <h3>Fluxo principal</h3>
+
+            <div class="diagram-flow">
+                <div class="box">PENDENTE <small>aguardando preparo</small></div>
+                <div class="arrow">⬇</div>
+                <div class="box">PRONTO <small>disponível para retirada</small></div>
+                <div class="arrow">⬇</div>
+                <div class="box">ENTREGUE <small>pedido concluído</small></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Fluxo alternativo</h3>
+
+            <div class="diagram-flow">
+                <div class="box">PRONTO</div>
+                <div class="arrow">⬇</div>
+                <div class="box">NAO_VEIO <small>cliente não retirou</small></div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning">
+            Não será permitido retornar para um status anterior.
+        </div>
+    </div>
+</section>
+
+<section id="backlog">
+    <div class="container">
+        <div class="section-title">
+            <h2>📋 Product Backlog</h2>
+        </div>
+
+        <div class="card">
+            <h3>Histórias de Usuário</h3>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>História</th>
+                    <th>Prioridade</th>
+                </tr>
+                <tr>
+                    <td>P01</td>
+                    <td>Como cliente, quero visualizar o cardápio.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P02</td>
+                    <td>Como cliente, quero ver imagens das pizzas.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P03</td>
+                    <td>Como cliente, quero adicionar pizzas ao carrinho.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P04</td>
+                    <td>Como cliente, quero finalizar pedidos.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P05</td>
+                    <td>Como cliente, quero consultar meus pedidos pelo telefone.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P06</td>
+                    <td>Como funcionário, quero visualizar pedidos.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P07</td>
+                    <td>Como funcionário, quero alterar status dos pedidos.</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>P08</td>
+                    <td>Como funcionário, quero cadastrar pizzas.</td>
+                    <td>Média</td>
+                </tr>
+                <tr>
+                    <td>P09</td>
+                    <td>Como funcionário, quero editar pizzas.</td>
+                    <td>Média</td>
+                </tr>
+                <tr>
+                    <td>P10</td>
+                    <td>Como funcionário, quero enviar imagens para as pizzas.</td>
+                    <td>Média</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="sprints">
+    <div class="container">
+        <div class="section-title">
+            <h2>🏁 Planejamento das 3 Sprints</h2>
+            <h3>Cada Sprint dura uma aula</h3>
+        </div>
+
+        <div class="card" id="sprint1">
+            <h3>🏁 Sprint 1 — Fundação do Projeto</h3>
+            <div class="alert alert-info">Objetivo: colocar a estrutura do sistema de pé.</div>
+
+            <div class="grid">
+                <div class="card front-card">
+                    <h3>🎨 Front-End</h3>
+                    <ul>
+                        <li>Criar layout geral</li>
+                        <li>Página inicial</li>
+                        <li>Cardápio</li>
+                        <li>Área de Funcionários</li>
+                        <li>Responsividade</li>
+                    </ul>
+                </div>
+
+                <div class="card back-card">
+                    <h3>☕ Back-End</h3>
+                    <ul>
+                        <li>Criar projeto Spring Boot</li>
+                        <li>Configurar MySQL</li>
+                        <li>Criar Produto</li>
+                        <li>Criar Cliente</li>
+                        <li>GET Produtos</li>
+                        <li>POST Produto</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>Entrega esperada:</strong> o cliente já consegue visualizar pizzas vindas da API.</p>
+        </div>
+
+        <div class="card" id="sprint2">
+            <h3>🏁 Sprint 2 — Pedidos e Carrinho</h3>
+            <div class="alert alert-info">Objetivo: permitir pedidos completos.</div>
+
+            <div class="grid">
+                <div class="card front-card">
+                    <h3>🎨 Front-End</h3>
+                    <ul>
+                        <li>Carrinho</li>
+                        <li>Finalização</li>
+                        <li>Consulta por telefone</li>
+                        <li>Tela Meus Pedidos</li>
+                    </ul>
+                </div>
+
+                <div class="card back-card">
+                    <h3>☕ Back-End</h3>
+                    <ul>
+                        <li>Pedido</li>
+                        <li>ItemPedido</li>
+                        <li>POST Pedido</li>
+                        <li>GET Pedido</li>
+                        <li>Validações</li>
+                        <li>DTOs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>Entrega esperada:</strong> cliente consegue realizar um pedido completo.</p>
+        </div>
+
+        <div class="card" id="sprint3">
+            <h3>🏁 Sprint 3 — Dashboard e Administração</h3>
+            <div class="alert alert-info">Objetivo: concluir o sistema.</div>
+
+            <div class="grid">
+                <div class="card front-card">
+                    <h3>🎨 Front-End</h3>
+                    <ul>
+                        <li>Dashboard</li>
+                        <li>CRUD Produtos</li>
+                        <li>CRUD Pedidos</li>
+                        <li>Upload de Imagens</li>
+                        <li>Refinamento visual</li>
+                    </ul>
+                </div>
+
+                <div class="card back-card">
+                    <h3>☕ Back-End</h3>
+                    <ul>
+                        <li>Status Pedido</li>
+                        <li>Upload</li>
+                        <li>CRUD completo</li>
+                        <li>Tratamento de erros</li>
+                        <li>Integração final</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>Entrega esperada:</strong> sistema funcionando de ponta a ponta.</p>
+        </div>
+    </div>
+</section>
 
 <section id="checklist">
+    <div class="container">
+        <div class="section-title">
+            <h2>🚀 Checklist Final</h2>
+        </div>
 
-<div class="container">
-
-<div class="section-title">
-
-<h2>🚀 Checklist Final</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li>Cardápio funcionando</li>
-
-<li>Carrinho funcionando</li>
-
-<li>Pedidos funcionando</li>
-
-<li>Consulta por telefone funcionando</li>
-
-<li>Dashboard funcionando</li>
-
-<li>CRUD Produtos funcionando</li>
-
-<li>Upload funcionando</li>
-
-<li>Banco funcionando</li>
-
-<li>API funcionando</li>
-
-<li>Integração funcionando</li>
-
-</ul>
-
-</div>
-
-</div>
-
+        <div class="card">
+            <ul>
+                <li>Cardápio funcionando</li>
+                <li>Imagens das pizzas funcionando</li>
+                <li>Carrinho funcionando</li>
+                <li>Pedidos funcionando</li>
+                <li>Consulta por telefone funcionando</li>
+                <li>Dashboard funcionando</li>
+                <li>CRUD Produtos funcionando</li>
+                <li>Upload funcionando</li>
+                <li>Banco funcionando</li>
+                <li>API funcionando</li>
+                <li>Integração funcionando</li>
+                <li>GitHub organizado</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<!-- ==================================================
-     APRESENTAÇÃO
-================================================== -->
+<section id="dod">
+    <div class="container">
+        <div class="section-title">
+            <h2>✅ Definition of Done</h2>
+        </div>
+
+        <div class="card">
+            <p>Uma tarefa só é considerada concluída quando:</p>
+
+            <ul>
+                <li>Código funcionando</li>
+                <li>Sem erros no console</li>
+                <li>Sem erro ao rodar o Back-End</li>
+                <li>Commit realizado</li>
+                <li>Push realizado</li>
+                <li>Testado</li>
+                <li>Integrado ao projeto</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <section id="apresentacao">
+    <div class="container">
+        <div class="section-title">
+            <h2>🎤 Apresentação Final</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <h3>Roteiro Sugerido</h3>
 
-<div class="section-title">
-
-<h2>🎤 Apresentação Final</h2>
-
-</div>
-
-<div class="card">
-
-<h3>Roteiro Sugerido</h3>
-
-<ol>
-
-<li>Apresentar o problema</li>
-
-<li>Mostrar o cardápio</li>
-
-<li>Criar pedido</li>
-
-<li>Consultar pedido</li>
-
-<li>Entrar no Dashboard</li>
-
-<li>Alterar status</li>
-
-<li>Cadastrar nova pizza</li>
-
-<li>Fazer upload de imagem</li>
-
-</ol>
-
-</div>
-
-</div>
-
+            <ol>
+                <li>Apresentar o problema</li>
+                <li>Explicar o objetivo do projeto</li>
+                <li>Mostrar o cardápio</li>
+                <li>Criar pedido</li>
+                <li>Consultar pedido pelo telefone</li>
+                <li>Entrar no Dashboard</li>
+                <li>Cadastrar ou editar uma pizza</li>
+                <li>Fazer upload de imagem</li>
+                <li>Alterar status do pedido</li>
+                <li>Explicar como o Scrum foi usado</li>
+            </ol>
+        </div>
+    </div>
 </section>
 
-<!-- ==================================================
-     DESAFIOS EXTRAS
-================================================== -->
+<section id="avaliacao">
+    <div class="container">
+        <div class="section-title">
+            <h2>🎓 Critérios de Avaliação</h2>
+        </div>
+
+        <div class="card">
+            <ul>
+                <li>Utilização correta do GitHub</li>
+                <li>Participação nas Sprints</li>
+                <li>Integração Front-End e Back-End</li>
+                <li>Funcionamento da API</li>
+                <li>Banco de dados funcionando</li>
+                <li>Apresentação final</li>
+                <li>Organização do código</li>
+                <li>Trabalho em equipe</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <section id="desafios">
+    <div class="container">
+        <div class="section-title">
+            <h2>🏆 Desafios Pós-Entrega</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <p>
+                Estes desafios não fazem parte da entrega principal. São sugestões para quem quiser evoluir o projeto.
+            </p>
+        </div>
 
-<div class="section-title">
+        <div class="grid">
+            <div class="card">
+                <h3>⭐ Nível Fácil</h3>
+                <ul>
+                    <li>Pesquisa por nome da pizza</li>
+                    <li>Ordenação por preço</li>
+                    <li>Tema escuro</li>
+                    <li>Animações</li>
+                    <li>Melhorias visuais no cardápio</li>
+                </ul>
+            </div>
 
-<h2>🏆 Desafios Pós-Entrega</h2>
+            <div class="card">
+                <h3>⭐⭐ Nível Médio</h3>
+                <ul>
+                    <li>Painel estatístico simples</li>
+                    <li>Relatório de pedidos</li>
+                    <li>Filtros avançados no Dashboard</li>
+                    <li>Gráfico de pedidos por dia</li>
+                    <li>Exportar pedidos para PDF</li>
+                    <li>Swagger</li>
+                </ul>
+            </div>
 
-</div>
-
-<div class="card">
-
-<p>
-
-Estes desafios NÃO fazem parte da nota principal.
-
-São apenas para quem quiser evoluir o projeto.
-
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>⭐ Nível Fácil</h3>
-
-<ul>
-
-<li>Pesquisa por nome da pizza</li>
-
-<li>Ordenação por preço</li>
-
-<li>Tema escuro</li>
-
-<li>Animações</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>⭐⭐ Nível Médio</h3>
-
-<ul>
-
-<li>Painel estatístico</li>
-
-<li>Relatório PDF</li>
-
-<li>Filtros avançados</li>
-
-<li>Dashboard melhorado</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>⭐⭐⭐ Nível Difícil</h3>
-
-<ul>
-
-<li>JWT</li>
-
-<li>Spring Security</li>
-
-<li>Docker</li>
-
-<li>Deploy Cloud</li>
-
-<li>CI/CD GitHub Actions</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
+            <div class="card">
+                <h3>⭐⭐⭐ Nível Difícil</h3>
+                <ul>
+                    <li>Login real com Spring Security</li>
+                    <li>JWT</li>
+                    <li>Docker</li>
+                    <li>Deploy em nuvem</li>
+                    <li>CI/CD com GitHub Actions</li>
+                    <li>Transformar o Front-End em React</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
-
-<!-- ==================================================
-     GLOSSÁRIO
-================================================== -->
 
 <section id="glossario">
+    <div class="container">
+        <div class="section-title">
+            <h2>📚 Glossário</h2>
+        </div>
 
-<div class="container">
-
-<div class="section-title">
-
-<h2>📚 Glossário</h2>
-
-</div>
-
-<div class="card">
-
-<ul>
-
-<li><strong>API</strong> → Comunicação entre sistemas</li>
-
-<li><strong>DTO</strong> → Objeto de transferência de dados</li>
-
-<li><strong>JPA</strong> → Persistência Java</li>
-
-<li><strong>Repository</strong> → Acesso ao banco</li>
-
-<li><strong>Service</strong> → Regras de negócio</li>
-
-<li><strong>Controller</strong> → Endpoints HTTP</li>
-
-<li><strong>CRUD</strong> → Create Read Update Delete</li>
-
-<li><strong>Sprint</strong> → Período de desenvolvimento</li>
-
-<li><strong>Backlog</strong> → Lista de tarefas</li>
-
-</ul>
-
-</div>
-
-</div>
-
+        <div class="card">
+            <ul>
+                <li><strong>API</strong> → comunicação entre sistemas</li>
+                <li><strong>DTO</strong> → objeto de transferência de dados</li>
+                <li><strong>JPA</strong> → ferramenta de persistência Java</li>
+                <li><strong>Repository</strong> → camada de acesso ao banco</li>
+                <li><strong>Service</strong> → camada de regras de negócio</li>
+                <li><strong>Controller</strong> → camada dos endpoints HTTP</li>
+                <li><strong>CRUD</strong> → Create, Read, Update e Delete</li>
+                <li><strong>Sprint</strong> → período de desenvolvimento</li>
+                <li><strong>Backlog</strong> → lista de tarefas</li>
+            </ul>
+        </div>
+    </div>
 </section>
-
-<!-- ==================================================
-     ENCERRAMENTO
-================================================== -->
 
 <section id="encerramento">
+    <div class="container">
+        <div class="section-title">
+            <h2>🍕 Projeto Concluído</h2>
+        </div>
 
-<div class="container">
+        <div class="card">
+            <p>
+                Se vocês chegaram até aqui, já passaram por praticamente todas as etapas de um projeto real:
+            </p>
 
-<div class="section-title">
+            <ul>
+                <li>Planejamento</li>
+                <li>Scrum</li>
+                <li>GitHub</li>
+                <li>Front-End</li>
+                <li>Back-End</li>
+                <li>Banco de Dados</li>
+                <li>Integração</li>
+                <li>Apresentação</li>
+            </ul>
 
-<h2>🍕 Projeto Concluído</h2>
-
-</div>
-
-<div class="card">
-
-<p>
-
-Se vocês chegaram até aqui, já passaram por praticamente todas as etapas de um projeto real:
-
-</p>
-
-<ul>
-
-<li>Planejamento</li>
-
-<li>Scrum</li>
-
-<li>GitHub</li>
-
-<li>Front-End</li>
-
-<li>Back-End</li>
-
-<li>Banco de Dados</li>
-
-<li>Integração</li>
-
-<li>Deploy (opcional)</li>
-
-</ul>
-
-<p>
-
-O objetivo deste projeto não é apenas aprender tecnologia.
-
-É aprender a trabalhar em equipe e entregar software funcional.
-
-</p>
-
-</div>
-
-</div>
-
+            <p>
+                O objetivo deste projeto não é apenas aprender tecnologia. É aprender a trabalhar em equipe e entregar software funcional.
+            </p>
+        </div>
+    </div>
 </section>
 
-
-
-
-<footer>
-
-<h3>Projeto Pizzaria</h3>
-
-<p>
-
-Curso de Programação • Scrum • GitHub
-
-</p>
-
+<footer class="footer">
+    <h3>Projeto Pizzaria</h3>
+    <p>Curso de Programação • Scrum • GitHub • Spring Boot • MySQL</p>
 </footer>
 
+<button class="btn-top" id="btnTop">↑</button>
+
 <script>
+const btnTop = document.getElementById("btnTop");
 
-console.log("Projeto Pizzaria carregado.");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+        btnTop.classList.add("show");
+    } else {
+        btnTop.classList.remove("show");
+    }
+});
 
+btnTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+console.log("Apostila Projeto Pizzaria carregada com sucesso.");
 </script>
 
 </body>
-
 </html>
